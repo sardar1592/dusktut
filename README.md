@@ -1,2 +1,2 @@
 # dusktut
-Dusk Youtube Tutorial
+Laravel Dusk Youtube Tutorial
