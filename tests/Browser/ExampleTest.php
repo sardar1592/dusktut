@@ -8,15 +8,14 @@ use Tests\DuskTestCase;
 
 class ExampleTest extends DuskTestCase
 {
-    /**
-     * A basic browser test example.
-     *
-     * @return void
-     */
-    public function testBasicExample()
+    use DatabaseMigrations;
+    
+    public function testLaravelIsVisibleOnHomePage()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
+                    ->pause(2000)
+                    ->screenshot('status.png')
                     ->assertSee('Laravel');
         });
     }
